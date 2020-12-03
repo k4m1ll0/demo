@@ -1,0 +1,121 @@
+141  wget https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/Common-Credentials/10k-most-common.txt
+  142  cd ..
+  143  cd work3/
+  144  ls
+  145  clear
+  146  ls -la
+  147  wget https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/Common-Credentials/10k-most-common.txt
+  148  clear
+  149  ls -la
+  150  cat 10k-most-common.txt | grep -E "^a" 
+  151  cat 10k-most-common.txt | grep -E "a$" 
+  152  man grep
+  153  clear
+  154  cat 10k-most-common.txt | grep -E "abc"
+  155  cat 10k-most-common.txt | grep -E "^a.*([0-9])$"
+  156  cat 10k-most-common.txt | grep -E "^a.*[0-9]$"
+  157  cat 10k-most-common.txt | grep -E "^a.*(0|1)$"
+  158  clear
+  159  cat 10k-most-common.txt | grep -E "^a.*(0|1)$"
+  160  cat 10k-most-common.txt | grep -E "^a.*(0|1)$" | head -n 10
+  161  cat 10k-most-common.txt | grep -E "^a.*[0-9]$" | head -n 10
+  162  clear
+  163  cat 10k-most-common.txt | grep -E "^a.*[0-9]$" | head -n 10
+  164  cat 10k-most-common.txt | egrep "([0-9]$)"
+  165  cat 10k-most-common.txt | grep -E "([0-9]$)" | wc -l
+  166  sudo apt install open-vm-tools-desktop 
+  167  clear
+  168  man grep 
+  169  cat 10k-most-common.txt | grep -En "([0-9]$)" | head -n 10 
+  170  cat 10k-most-common.txt | grep -Eo "([0-9]$)" | head -n 10 
+  171  clear
+  172  cat 10k-most-common.txt | grep -E '^.b.*[0-9]{3}$'
+  173  cat 10k-most-common.txt | grep -E '^(.b.*[0-9]{5})$'
+  174  cat 10k-most-common.txt | grep -E '^(.b.*[0-9]{2,4})$'
+  175  clear
+  176  #^[a-z].*[0-9]{0}$
+  177  cat 10k-most-common.txt | grep -E '^[a-z].*[0-9]{0}$'
+  178  cat 10k-most-common.txt | grep -E '^[a-z].*[0-9]{0}$' | head -n 1
+  179  cat 10k-most-common.txt | grep -E '^[a-z].*[0-9]{0}$' | head -n 10
+  180  clear
+  181  cat 10k-most-common.txt | grep -E '^[a-z].*[0-9]{0}$' | head -n 10
+  182  cat 10k-most-common.txt | grep -E '^[a-z].*$' | head -n 10
+  183  cat 10k-most-common.txt | grep -E -o '^[a-z].*$' | head -n 10
+  184  clear
+  185  cat 10k-most-common.txt | grep -E '^[a-z].*$' | head -n 10
+  186  cat 10k-most-common.txt | grep -E '^[a-z].*$' 
+  187  clear
+  188  echo 'abc123:#'
+  189  echo 'abc123:#' | grep -E '#'
+  190  echo 'abc123:#' | grep -E '.#'
+  191  echo 'abc123:#' | grep -E '.3'
+  192* echo 'abc123:#' | grep -E ''
+  193  clear
+  194  cat 10k-most-common.txt | grep -E '^[a-z]*[^a-z]{0}$ 
+  195  cat 10k-most-common.txt | grep -E '^[a-z]*[^a-z]{0}$'
+  196  cat 10k-most-common.txt | grep -E '^[a-z]*[^a-z]{0} $'
+  197  man grep
+  198  clear
+  199  cat 10k-most-common.txt | grep -E '^[a-z]*[^a-z]{0} $'
+  200  cat 10k-most-common.txt | grep -E '^[a-z]*[^a-z]{0}$'
+  201  cat 10k-most-common.txt | grep -E '^[a-z]*[^a-z]{0}$' | wc -l
+  202  clear
+  203  cat 10k-most-common.txt | grep -E '^[a-z]*[^a-z]{0}$' | wc -l
+  204  cat 10k-most-common.txt | grep -E '^[a-z]+$' | wc -l
+  205  cat 10k-most-common.txt | grep -E '^[a-z]+$'
+  206  clear
+  207  cat 10k-most-common.txt | grep -E '^[a-Z]+$' | 
+  208  cat 10k-most-common.txt | grep -E '^[a-Z]+$' 
+  209  cat 10k-most-common.txt | grep -E '^[a-Z]+$'  | wc -l
+  210  clear
+  211  cat 10k-most-common.txt | grep -E '^[a-Z]*$'  | wc -l
+  212  cat 10k-most-common.txt | grep -E '^[^0-9]*$'  | wc -l
+  213  cat 10k-most-common.txt | grep -E '^[^0-9]$'
+  214  cat 10k-most-common.txt | grep -E '[^0-9]$'
+  215  cat 10k-most-common.txt | grep -E '^([^0-9])$'
+  216  cat 10k-most-common.txt | grep -E '^([^0-9]+)$'
+  217  cat 10k-most-common.txt | grep -E '^([^0-9]+)$' | wc -l
+  218  cat 10k-most-common.txt | grep -E '^[a-Z]*$'  | wc -l
+  219  cat 10k-most-common.txt | grep -E '^[a-Z]*$' > t1
+  220  cat 10k-most-common.txt | grep -E '^([^0-9]+)$' | wc -l
+  221  cat 10k-most-common.txt | grep -E '^([^0-9]+)$' > t2
+  222  clear
+  223  ls -la
+  224  diff t1 t2 
+  225  clear
+  226  cat 10k-most-common.txt | grep -E '^([^0-9]*)$' > t2
+  227  cat 10k-most-common.txt | grep -E '^([^0-9]*)$'| wc -l
+  228  cat 10k-most-common.txt | grep -E '^([^0-9]+)$'| wc -l
+  229  vim test
+  230  clear test
+  231  clear
+  232  cat test 
+  233  cat test  | wc -l
+  234  cat test  | grep -E '^([^0-9]+)$'
+  235  cat test  | grep -E '^([^0-9]*)$'
+  236  cat 10k-most-common.txt | grep -E '^([^0-9]*)$'| wc -l
+  237  man grep
+  238  cat 10k-most-common.txt | grep -E '^([^[[:digit:]]]*)$'| wc -l
+  239  cat 10k-most-common.txt | grep -E '^([[:digit:]]*)$'| wc -l
+  240  cat 10k-most-common.txt | grep -E '^([[:digit:]]*)$'| head -n 10
+  241  cat 10k-most-common.txt | grep -E '^([[:digit:]]+)$'| head -n 10
+  242  cat 10k-most-common.txt | grep -E '^([[:digit:]]*)$'| head -n 10
+  243  clear
+  244  wget https://pastebin.com/raw/YB0ATaXa
+  245  clear
+  246  ls -la
+  247  rm -rf :w
+  248  ls
+  249  rm -rf t1 t2 test 
+  250  lclear
+  251  clear
+  252  ls
+  253  mv YB0ATaXa | data.txt
+  254  mv YB0ATaXa data.txt
+  255  ls
+  256  cat data.txt 
+  257  clear
+  258  cat data.txt 
+  259  clear
+  260  history | grep -n work3
+  261  history > commands.txt
